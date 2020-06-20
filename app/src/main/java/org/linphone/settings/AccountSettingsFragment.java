@@ -139,7 +139,7 @@ public class AccountSettingsFragment extends SettingsFragment {
         mPassword = mRootView.findViewById(R.id.pref_passwd);
         mPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
-        mDomain = mRootView.findViewById(R.id.pref_domain);
+        // mDomain = mRootView.findViewById(R.id.pref_domain);
 
         mDisplayName = mRootView.findViewById(R.id.pref_display_name);
         mDisplayName.setInputType(
@@ -254,38 +254,39 @@ public class AccountSettingsFragment extends SettingsFragment {
                     }
                 });
 
-        mDomain.setListener(
-                new SettingListenerBase() {
-                    @Override
-                    public void onTextValueChanged(String newValue) {
-                        if (newValue.isEmpty()) {
-                            return;
-                        }
-                        if (newValue.contains(":")) {
-                            Log.e(
-                                    "[Account Settings] Do not specify port information inside domain field !");
-                            return;
-                        }
-
-                        if (mAuthInfo != null) {
-                            mAuthInfo.setDomain(newValue);
-                        } else {
-                            Log.e("[Account Settings] No auth info !");
-                        }
-
-                        if (mProxyConfig != null) {
-                            mProxyConfig.edit();
-                            Address identity = mProxyConfig.getIdentityAddress();
-                            if (identity != null) {
-                                identity.setDomain(newValue);
-                            }
-                            mProxyConfig.setIdentityAddress(identity);
-                            mProxyConfig.done();
-                        } else {
-                            Log.e("[Account Settings] No proxy config !");
-                        }
-                    }
-                });
+        //        mDomain.setListener(
+        //                new SettingListenerBase() {
+        //                    @Override
+        //                    public void onTextValueChanged(String newValue) {
+        //                        if (newValue.isEmpty()) {
+        //                            return;
+        //                        }
+        //                        if (newValue.contains(":")) {
+        //                            Log.e(
+        //                                    "[Account Settings] Do not specify port information
+        // inside domain field !");
+        //                            return;
+        //                        }
+        //
+        //                        if (mAuthInfo != null) {
+        //                            mAuthInfo.setDomain(newValue);
+        //                        } else {
+        //                            Log.e("[Account Settings] No auth info !");
+        //                        }
+        //
+        //                        if (mProxyConfig != null) {
+        //                            mProxyConfig.edit();
+        //                            Address identity = mProxyConfig.getIdentityAddress();
+        //                            if (identity != null) {
+        //                                identity.setDomain(newValue);
+        //                            }
+        //                            mProxyConfig.setIdentityAddress(identity);
+        //                            mProxyConfig.done();
+        //                        } else {
+        //                            Log.e("[Account Settings] No proxy config !");
+        //                        }
+        //                    }
+        //                });
 
         mDisplayName.setListener(
                 new SettingListenerBase() {
@@ -636,7 +637,7 @@ public class AccountSettingsFragment extends SettingsFragment {
 
             mUsername.setValue(identityAddress.getUsername());
 
-            mDomain.setValue(identityAddress.getDomain());
+            // mDomain.setValue(identityAddress.getDomain());
 
             mDisplayName.setValue(identityAddress.getDisplayName());
 
