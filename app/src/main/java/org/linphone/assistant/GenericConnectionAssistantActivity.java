@@ -24,6 +24,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
@@ -38,6 +39,7 @@ public class GenericConnectionAssistantActivity extends AssistantActivity implem
     private TextView mLogin;
     private EditText mUsername, mPassword, mDomain, mDisplayName;
     private RadioGroup mTransport;
+    private RadioButton udp;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,9 +63,10 @@ public class GenericConnectionAssistantActivity extends AssistantActivity implem
         mDisplayName.addTextChangedListener(this);
         mPassword = findViewById(R.id.assistant_password);
         mPassword.addTextChangedListener(this);
-        mDomain = findViewById(R.id.assistant_domain);
-        mDomain.addTextChangedListener(this);
         mTransport = findViewById(R.id.assistant_transports);
+        udp = findViewById(R.id.transport_udp);
+
+        udp.setChecked(true);
     }
 
     private void configureAccount() {
@@ -100,8 +103,7 @@ public class GenericConnectionAssistantActivity extends AssistantActivity implem
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
         mLogin.setEnabled(
-                !mUsername.getText().toString().isEmpty()
-                        && !mDomain.getText().toString().isEmpty());
+                !mUsername.getText().toString().isEmpty());
     }
 
     @Override

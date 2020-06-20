@@ -28,7 +28,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/splashscreen" />
+                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:textColor="?attr/secondaryTextColor"
@@ -94,7 +94,7 @@
                 android:layout_gravity="center"
                 android:autoLink="web"
                 android:gravity="center"
-                android:text="@string/about_link"
+                android:text="https://360comz.com"
                 android:textColorLink="@color/primary_color" />
 
             <TextView

@@ -9,7 +9,7 @@
         <item name="colorAccent">@color/primary_color</item>
         <item name="android:colorPrimary">@color/primary_color</item>
         <!-- Comment out the following line to disable system's status bar coloring -->
-        <item name="android:colorPrimaryDark">@color/primary_dark_color</item>
+        <item name="android:colorPrimaryDark">@color/primary_color</item>
         <item name="android:textColorPrimary">@color/light_primary_text_color</item>
         <item name="android:textColorSecondary">@color/grey_color</item>
         <item name="android:textColorHint">@color/light_grey_color</item>
@@ -45,7 +45,7 @@
     <!-- Assistant related -->
 
     <style name="assistant_input_field_error_font" parent="@android:style/TextAppearance.Small">
-        <item name="android:textColor">@color/red_color</item>
+        <item name="android:textColor">@color/primary_color</item>
         <item name="android:textSize">14sp</item>
     </style>
 
@@ -88,7 +88,7 @@
     </style>
 
     <style name="imdn_undelivered_font" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textColor">@color/red_color</item>
+        <item name="android:textColor">@color/primary_color</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -158,7 +158,7 @@
     </style>
 
     <style name="group_chat_security_event_font" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textColor">@color/red_color</item>
+        <item name="android:textColor">@color/primary_color</item>
         <item name="android:textSize">13sp</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:lineSpacingExtra">0sp</item>
