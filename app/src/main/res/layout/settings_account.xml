@@ -97,13 +97,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:hint="@string/pref_proxy"
+            android:visibility="gone"
             linphone:title="@string/pref_proxy" />
 
         <org.linphone.settings.widget.SwitchSetting
             android:id="@+id/pref_enable_outbound_proxy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            linphone:subtitle="@string/pref_help_outbound_proxy"
             linphone:title="@string/pref_enable_outbound_proxy" />
 
         <org.linphone.settings.widget.TextSetting
@@ -111,6 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:hint="@string/pref_stun_server"
+            android:visibility="gone"
             linphone:title="@string/pref_stun_server" />
 
         <org.linphone.settings.widget.SwitchSetting
@@ -130,6 +131,7 @@
             android:id="@+id/pref_prefix"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             linphone:hint="@string/pref_prefix_desc"
             linphone:subtitle="@string/pref_prefix_desc"
             linphone:title="@string/pref_prefix" />
