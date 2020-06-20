@@ -25,19 +25,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
-
 import androidx.annotation.NonNull;
-
-import org.linphone.R;
-import org.linphone.utils.SelectableAdapter;
-import org.linphone.utils.SelectableHelper;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
+import org.linphone.R;
+import org.linphone.utils.SelectableAdapter;
+import org.linphone.utils.SelectableHelper;
 
 public class RecordingsAdapter extends SelectableAdapter<RecordingViewHolder> {
     private final List<Recording> mRecordings;

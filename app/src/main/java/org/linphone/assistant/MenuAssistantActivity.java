@@ -20,14 +20,11 @@
 package org.linphone.assistant;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
-
 import org.linphone.R;
 import org.linphone.settings.LinphonePreferences;
 
@@ -44,13 +41,8 @@ public class MenuAssistantActivity extends AssistantActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent();
-                        intent.setAction(Intent.ACTION_VIEW);
-                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                        intent.setData(Uri.parse("https://360comz.com/voice"));
-                        startActivity(intent);
-
-                        /*      if (getResources().getBoolean(R.bool.isTablet)
+                        Intent intent;
+                        if (getResources().getBoolean(R.bool.isTablet)
                                 || !getResources().getBoolean(R.bool.use_phone_number_validation)) {
                             intent =
                                     new Intent(
@@ -61,12 +53,12 @@ public class MenuAssistantActivity extends AssistantActivity {
                                     new Intent(
                                             MenuAssistantActivity.this,
                                             PhoneAccountCreationAssistantActivity.class);
-                        }*/
-
+                        }
+                        startActivity(intent);
                     }
                 });
 
-        /*      TextView accountConnection = findViewById(R.id.account_connection);
+        TextView accountConnection = findViewById(R.id.account_connection);
         accountConnection.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -79,7 +71,7 @@ public class MenuAssistantActivity extends AssistantActivity {
                 });
         if (getResources().getBoolean(R.bool.hide_linphone_accounts_in_assistant)) {
             accountConnection.setVisibility(View.GONE);
-        }*/
+        }
 
         TextView genericConnection = findViewById(R.id.generic_connection);
         genericConnection.setOnClickListener(
@@ -96,20 +88,20 @@ public class MenuAssistantActivity extends AssistantActivity {
             genericConnection.setVisibility(View.GONE);
         }
 
-        //        TextView remoteConfiguration = findViewById(R.id.remote_configuration);
-        //        remoteConfiguration.setOnClickListener(
-        //                new View.OnClickListener() {
-        //                    @Override
-        //                    public void onClick(View v) {
-        //                        startActivity(
-        //                                new Intent(
-        //                                        MenuAssistantActivity.this,
-        //                                        RemoteConfigurationAssistantActivity.class));
-        //                    }
-        //                });
-        //        if (getResources().getBoolean(R.bool.hide_remote_provisioning_in_assistant)) {
-        //            remoteConfiguration.setVisibility(View.GONE);
-        //        }
+        TextView remoteConfiguration = findViewById(R.id.remote_configuration);
+        remoteConfiguration.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(
+                                new Intent(
+                                        MenuAssistantActivity.this,
+                                        RemoteConfigurationAssistantActivity.class));
+                    }
+                });
+        if (getResources().getBoolean(R.bool.hide_remote_provisioning_in_assistant)) {
+            remoteConfiguration.setVisibility(View.GONE);
+        }
 
         if (getResources().getBoolean(R.bool.assistant_use_linphone_login_as_first_fragment)) {
             startActivity(

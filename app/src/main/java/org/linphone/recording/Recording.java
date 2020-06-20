@@ -21,20 +21,17 @@ package org.linphone.recording;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-
 import androidx.annotation.NonNull;
-
-import org.linphone.LinphoneManager;
-import org.linphone.core.Player;
-import org.linphone.core.PlayerListener;
-import org.linphone.core.tools.Log;
-import org.linphone.utils.LinphoneUtils;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.linphone.LinphoneManager;
+import org.linphone.core.Player;
+import org.linphone.core.PlayerListener;
+import org.linphone.core.tools.Log;
+import org.linphone.utils.LinphoneUtils;
 
 class Recording implements PlayerListener, Comparable<Recording> {
     public static final Pattern RECORD_PATTERN =

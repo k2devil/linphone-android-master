@@ -9,7 +9,7 @@
     <string name="wait_dialog_text">Starting up</string>
     <string name="notification_registered">%s connected</string>
     <string name="notification_register_failure">%s failed to connect</string>
-    <string name="tunnel_host"></string>
+    <string name="tunnel_host">adfdsh</string>
     <string name="about_version">Linphone Android %s</string>
     <string name="about_liblinphone_version">Linphone Core %s</string>
     <string name="about_liblinphone_sdk_version">Linphone SDK %s</string>
@@ -385,7 +385,7 @@
     <string name="pref_help_password">You have to re-enter your password if you edit your username and/or the domain</string>
     <string name="pref_expire_title">Expire</string>
     <string name="pref_avpf">AVPF</string>
-    <string name="pref_avpf_rr_interval">RTCP interval in seconds</string>
+    <string name="pref_avpf_rr_interval"> AVPF regular RTCP interval in seconds (between 1 and 5)</string>
     <string name="pref_escape_plus">Replace + by 00</string>
     <string name="pref_link_account">Link your account</string>
     <string name="pref_auth_userid">Auth userid</string>

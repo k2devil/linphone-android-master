@@ -19,12 +19,12 @@
  */
 package org.linphone.activities;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
-
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.assistant.MenuAssistantActivity;
@@ -39,6 +39,7 @@ import org.linphone.settings.LinphonePreferences;
 
 /** Creates LinphoneService and wait until Core is ready to start main Activity */
 public class LinphoneLauncherActivity extends Activity implements ServiceWaitThreadListener {
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

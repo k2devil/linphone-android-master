@@ -19,6 +19,7 @@
  */
 package org.linphone.activities;
 
+import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ import org.linphone.settings.LinphonePreferences;
 
 public abstract class ThemeableActivity extends AppCompatActivity {
 
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (getResources().getBoolean(R.bool.orientation_portrait_only)) {

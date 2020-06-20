@@ -25,9 +25,9 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.Nullable;
-
+import java.util.ArrayList;
+import java.util.List;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.assistant.PhoneAccountLinkingAssistantActivity;
@@ -46,9 +46,6 @@ import org.linphone.settings.widget.SettingListenerBase;
 import org.linphone.settings.widget.SwitchSetting;
 import org.linphone.settings.widget.TextSetting;
 import org.linphone.utils.PushNotificationUtils;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class AccountSettingsFragment extends SettingsFragment {
     private View mRootView;
@@ -141,7 +138,8 @@ public class AccountSettingsFragment extends SettingsFragment {
 
         mPassword = mRootView.findViewById(R.id.pref_passwd);
         mPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        //mDomain = mRootView.findViewById(R.id.pref_domain);
+
+        mDomain = mRootView.findViewById(R.id.pref_domain);
 
         mDisplayName = mRootView.findViewById(R.id.pref_display_name);
         mDisplayName.setInputType(

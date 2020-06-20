@@ -25,9 +25,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
-
 import org.linphone.R;
 
 public class RecordingViewHolder extends RecyclerView.ViewHolder

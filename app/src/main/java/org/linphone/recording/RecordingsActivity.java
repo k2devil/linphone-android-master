@@ -27,22 +27,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.activities.MainActivity;
 import org.linphone.call.views.LinphoneLinearLayoutManager;
 import org.linphone.utils.FileUtils;
 import org.linphone.utils.SelectableHelper;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class RecordingsActivity extends MainActivity
         implements SelectableHelper.DeleteListener, RecordingViewHolder.ClickListener {
