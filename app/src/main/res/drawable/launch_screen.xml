@@ -5,7 +5,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/splashscreen">
+            android:src="@mipmap/splash_screen">
         </bitmap>
     </item>
 </layer-list>

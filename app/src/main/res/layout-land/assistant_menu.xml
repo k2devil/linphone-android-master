@@ -65,6 +65,21 @@
                     android:text="@string/assistant_create_account" />
 
                 <TextView
+                    android:id="@+id/account_connection"
+                    style="@style/button_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/assistant_button"
+                    android:contentDescription="@string/assistant_login_linphone"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/assistant_login_linphone"
+                    android:textColor="@drawable/assistant_button_text_color" />
+
+                <TextView
                     android:id="@+id/generic_connection"
                     style="@style/button_font"
                     android:gravity="center"
@@ -78,6 +93,21 @@
                     android:textColor="@drawable/assistant_button_text_color"
                     android:contentDescription="@string/assistant_login_generic"
                     android:text="@string/assistant_login_generic" />
+
+                <TextView
+                    android:id="@+id/remote_configuration"
+                    style="@style/button_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/assistant_button"
+                    android:contentDescription="@string/assistant_remote_provisioning"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/assistant_remote_provisioning"
+                    android:textColor="@drawable/assistant_button_text_color" />
 
             </GridLayout>
 

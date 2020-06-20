@@ -30,12 +30,12 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.linphone.LinphoneContext;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
@@ -49,6 +49,9 @@ import org.linphone.core.tools.Log;
 import org.linphone.settings.LinphonePreferences;
 import org.linphone.settings.SettingsActivity;
 import org.linphone.utils.LinphoneUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SideMenuFragment extends Fragment {
     private DrawerLayout mSideMenu;
@@ -89,6 +92,7 @@ public class SideMenuFragment extends Fragment {
                     new SideMenuItem(
                             getResources().getString(R.string.inapp), R.drawable.menu_options));
         }
+
         sideMenuItems.add(
                 new SideMenuItem(
                         getResources().getString(R.string.menu_about), R.drawable.menu_about));

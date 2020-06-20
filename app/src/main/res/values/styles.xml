@@ -6,10 +6,10 @@
         <item name="android:windowBackground">@drawable/launch_screen</item>
 
         <!-- Android theme override -->
-        <item name="colorAccent">@color/primary_color</item>
+        <item name="colorAccent">@color/white_color</item>
         <item name="android:colorPrimary">@color/primary_color</item>
         <!-- Comment out the following line to disable system's status bar coloring -->
-        <item name="android:colorPrimaryDark">@color/primary_color</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark_color</item>
         <item name="android:textColorPrimary">@color/light_primary_text_color</item>
         <item name="android:textColorSecondary">@color/grey_color</item>
         <item name="android:textColorHint">@color/light_grey_color</item>

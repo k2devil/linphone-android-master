@@ -25,7 +25,9 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
+
 import org.linphone.R;
 import org.linphone.settings.LinphonePreferences;
 
@@ -90,24 +92,24 @@ public class MenuAssistantActivity extends AssistantActivity {
                                         GenericConnectionAssistantActivity.class));
                     }
                 });
-//        if (getResources().getBoolean(R.bool.hide_generic_accounts_in_assistant)) {
-//            genericConnection.setVisibility(View.GONE);
-//        }
-//
-//        TextView remoteConfiguration = findViewById(R.id.remote_configuration);
-//        remoteConfiguration.setOnClickListener(
-//                new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        startActivity(
-//                                new Intent(
-//                                        MenuAssistantActivity.this,
-//                                        RemoteConfigurationAssistantActivity.class));
-//                    }
-//                });
-//        if (getResources().getBoolean(R.bool.hide_remote_provisioning_in_assistant)) {
-//            remoteConfiguration.setVisibility(View.GONE);
-//        }
+        if (getResources().getBoolean(R.bool.hide_generic_accounts_in_assistant)) {
+            genericConnection.setVisibility(View.GONE);
+        }
+
+        //        TextView remoteConfiguration = findViewById(R.id.remote_configuration);
+        //        remoteConfiguration.setOnClickListener(
+        //                new View.OnClickListener() {
+        //                    @Override
+        //                    public void onClick(View v) {
+        //                        startActivity(
+        //                                new Intent(
+        //                                        MenuAssistantActivity.this,
+        //                                        RemoteConfigurationAssistantActivity.class));
+        //                    }
+        //                });
+        //        if (getResources().getBoolean(R.bool.hide_remote_provisioning_in_assistant)) {
+        //            remoteConfiguration.setVisibility(View.GONE);
+        //        }
 
         if (getResources().getBoolean(R.bool.assistant_use_linphone_login_as_first_fragment)) {
             startActivity(

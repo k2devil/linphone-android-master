@@ -14,7 +14,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:src="@drawable/splashscreen" />
+            android:src="@mipmap/splash_screen" />
 
         <TextView
             style="@style/splash_screen_app_name_font"

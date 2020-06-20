@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white_color">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@mipmap/splash_screen" />
 
             <TextView
                 android:textSize="13sp"
@@ -71,7 +72,7 @@
                 android:autoLink="web"
                 android:gravity="center"
                 android:paddingTop="20dp"
-                android:text="https://360comz.com"
+                android:text="@string/about_link"
                 android:textColorLink="@color/primary_color" />
 
             <TextView
